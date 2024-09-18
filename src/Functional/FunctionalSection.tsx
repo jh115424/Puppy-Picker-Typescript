@@ -1,8 +1,34 @@
 // you can use this type for react children if you so choose
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { ActiveComponent } from "../types";
 
-export const FunctionalSection = () => {
+
+
+
+export const FunctionalSection = ({
+  children,
+  determineActiveComponent,
+  activeComponent,
+  favoritedDogsCount,
+  unfavoritedDogsCount,
+}: {
+  children: ReactNode;
+  determineActiveComponent: (component: ActiveComponent) => void;
+  activeComponent: ActiveComponent;
+  favoritedDogsCount: number;
+  unfavoritedDogsCount: number;
+}) => {
+  const makeClassName = (
+    activeComponent: ActiveComponent,
+    currentComponent: ActiveComponent
+  ) => {
+    return activeComponent === currentComponent ? "active" : "";
+  };
+  const favoriteClassName = makeClassName(activeComponent, "favorited");
+  const unfavoriteClassName = makeClassName(activeComponent, "unfavorited");
+  const makeDogFormClassName = makeClassName(activeComponent, "create-dog-form");
+
   return (
     <section id="main-section">
       <div className="container-header">
@@ -11,21 +37,27 @@ export const FunctionalSection = () => {
           Change to Class
         </Link>
         <div className="selectors">
-          {/* This should display the favorited count */}
-          <div className={`selector active`} onClick={() => {}}>
-            favorited ( 12 )
+          <div
+            className={`selector ${favoriteClassName}`}
+            onClick={() => determineActiveComponent("favorited")}
+          >
+            favorited ( {favoritedDogsCount} )
           </div>
-
-          {/* This should display the unfavorited count */}
-          <div className={`selector`} onClick={() => {}}>
-            unfavorited ( 25 )
+          <div
+            className={`selector ${unfavoriteClassName}`}
+            onClick={() => determineActiveComponent("unfavorited")}
+          >
+            unfavorited ( {unfavoritedDogsCount} )
           </div>
-          <div className={`selector`} onClick={() => {}}>
+          <div
+            className={`selector ${makeDogFormClassName}`}
+            onClick={() => determineActiveComponent("create-dog-form")}
+          >
             create dog
           </div>
         </div>
       </div>
-      <div className="content-container"></div>
+      <div className="content-container">{children}</div>
     </section>
   );
-};
+}

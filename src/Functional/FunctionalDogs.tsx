@@ -1,30 +1,59 @@
 import { DogCard } from "../Shared/DogCard";
-import { dogPictures } from "../dog-pictures";
+import { Dog  } from "../types";
 
 
 // Right now these dogs are constant, but in reality we should be getting these from our server
-export const FunctionalDogs = () => {
+export const FunctionalDogs = ({
+  dogs,
+  deleteDog,
+  updateDog,
+  isLoading,
+}: {
+  dogs: Dog[];
+  deleteDog: (dog: Dog) => Promise<void>;
+  updateDog: (dog: Dog, isFavorite: boolean) => Promise<void>;
+  isLoading: boolean;
+}) => {
 
-
-
-  // 1. map dogs array to an array of DogCard components
-  // 2. render them in a pretty grid.
-  // 3. make sure to use the dogPictures array provided for setting the correct image url
-  // 4. make sure to use the isLoading boolean provided for setting the correct loading value
-  // 5. make sure to use the isFavorite boolean provided for setting the correct favorite value
-  // 6. make sure to use the onTrashIconClick function provided
-  // 7. make sure to use the onHeartClick function provided
-  // 8. make sure to use the onEmptyHeartClick function provided
-  // 9. make sure to use the isLoading boolean provided
-  // 10. make sure to use the isFavorite boolean provided
-  // 11. make sure to use the id number provided
-  
-  
   return (
-    //  the "<> </>"" are called react fragments, it's like adding all the html inside
-    // without adding an actual html element
     <>
-      <DogCard
+    {dogs.map((dog) => {
+      return (
+        <DogCard
+          dog={dog}
+          key={dog.id}
+          onTrashIconClick={() => {
+            deleteDog(dog).catch((error: Error) => error.message);
+          }}
+          onEmptyHeartClick={() => {
+            updateDog(dog, true).catch((error: Error) => error.message);
+          }}
+          onHeartClick={() => {
+            updateDog(dog, false).catch((error: Error) => error.message);
+          }}
+          isLoading={isLoading}
+        />
+      );
+    })}
+    
+     
+    </>
+  );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     {/* <DogCard
         dog={{
           id: 1,
           image: dogPictures.BlueHeeler,
@@ -103,7 +132,4 @@ export const FunctionalDogs = () => {
           alert("clicked empty heart");
         }}
         isLoading={false}
-      />
-    </>
-  );
-};
+      /> */}

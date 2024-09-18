@@ -14,7 +14,7 @@ export const Requests = {
 
   // should return a promise with all dogs in the database
   getAllDogs: async () => {
-		return fetch("http://localhost:3000", {
+		return fetch(baseUrl + "/dogs", {
 			method: "GET",
 			headers: myHeaders,
 
