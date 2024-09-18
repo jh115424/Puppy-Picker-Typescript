@@ -4,11 +4,27 @@ import { dogPictures } from "../dog-pictures";
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
 export const FunctionalCreateDogForm = () => {
+
+  type formDatata = {
+    name: string,
+    description: string,
+    image: string,
+    isFavorite: boolean,
+  }
+
+  
+
+
+
+
+
+
   return (
     <form
       action=""
       id="create-dog-form"
       onSubmit={(e) => {
+      
         e.preventDefault();
       }}
     >
@@ -16,7 +32,12 @@ export const FunctionalCreateDogForm = () => {
       <label htmlFor="name">Dog Name</label>
       <input type="text" disabled={false} />
       <label htmlFor="description">Dog Description</label>
-      <textarea name="" id="" cols={80} rows={10} disabled={false}></textarea>
+      <textarea name=""
+       id=""
+       cols={80}
+        rows={10}
+         disabled={false}>          
+         </textarea>
       <label htmlFor="picture">Select an Image</label>
       <select id="">
         {Object.entries(dogPictures).map(([label, pictureValue]) => {

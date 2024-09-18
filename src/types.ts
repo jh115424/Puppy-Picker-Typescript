@@ -6,3 +6,5 @@ export type Dog = {
 	description: string,
 	isFavorite: boolean,
 };
+
+export type ActiveComponent = "all" | "favorited" | "unfavorited" | "create-dog-form"
