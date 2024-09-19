@@ -1,7 +1,10 @@
 import { Component } from "react";
 import { ClassSection } from "./ClassSection";
-import { ClassDogs } from "./ClassDogs";
+import { ActiveComponent, Dog } from "../types";
+import { Requests } from "../api";
 import { ClassCreateDogForm } from "./ClassCreateDogForm";
+import { ClassDogs } from "./ClassDogs";
+import toast from "react-hot-toast";
 
 export class ClassApp extends Component {
   render() {

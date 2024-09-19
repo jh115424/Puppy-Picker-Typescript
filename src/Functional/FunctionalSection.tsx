@@ -3,9 +3,6 @@ import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ActiveComponent } from "../types";
 
-
-
-
 export const FunctionalSection = ({
   children,
   determineActiveComponent,

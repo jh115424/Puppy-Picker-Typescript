@@ -5,11 +5,6 @@ import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { Requests } from "../api";
 import toast from "react-hot-toast";
-// import MyDogComponent from "./MyDogComponent";
-
-
-
-
 
 export function FunctionalApp() {
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
@@ -27,24 +22,23 @@ export function FunctionalApp() {
     });
   }, []);
 
-  const postDog = (dog: Omit<Dog, "id">) => {
+  const postDog = async (dog: Omit<Dog, "id">) => {
     setIsLoading(true);
-    Requests.postDog(dog)
-    .then(refetchDogData)
-    .then(() => {
-        toast.success(`Created ${dog.name}`);
-      })
-      .catch(() => {
-        toast.error(`Unable to create ${dog.name}`);
-      })
-      .finally(() => setIsLoading(false));
-
+    try {
+      await Requests.postDog(dog);
+      await refetchDogData();
+      toast.success(`Created ${dog.name}`);
+    } catch {
+      toast.error(`Unable to create ${dog.name}`);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const deleteDog = async (dog: Dog) => {
     setIsLoading(true);
     try {
-      await Requests.deleteDog(dog.id);
+      await Requests.deleteDog(dog);
       await refetchDogData();
       toast.success(`Deleted ${dog.name}`);
     } catch {
@@ -57,7 +51,7 @@ export function FunctionalApp() {
   const updateDog = async (dog: Dog, isFavorite: boolean) => {
     setIsLoading(true);
     try {
-      await Requests.updateDog(dog.id, isFavorite);
+      await Requests.updateDog(dog, isFavorite);
       await refetchDogData();
       toast.success(`${isFavorite ? "Favorited" : "Unfavorited"} ${dog.name}`);
     } catch {

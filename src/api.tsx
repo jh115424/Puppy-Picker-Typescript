@@ -1,69 +1,37 @@
 import { Dog } from "./types.ts";
 
 
+
 export const baseUrl = "http://localhost:3000";
 
+export const Requests = {
+  getAllDogs: () =>
+    fetch(`${baseUrl}/dogs`).then((response) => response.json()),
 
-const myHeaders = {
-	"Content-Type": "application/json",
-};
+  postDog: (dog: Omit<Dog, "id">) => {
+    return fetch(`${baseUrl}/dogs`, {
+      body: JSON.stringify(dog),
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    }).then((response) => response.json());
+  },
 
-export const Requests = { 
-   
+  deleteDog: (dog: Dog) => {
+    return fetch(`${baseUrl}/dogs/${dog.id}`, {
+      method: "DELETE",
+    }).then((response) => response.json());
+  },
+  updateDog: (dog: Dog, isFavorite: boolean) => {
+    return fetch(`${baseUrl}/dogs/${dog.id}`, {
+      body: JSON.stringify({ isFavorite: isFavorite }),
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((response) => response.json());
+  },
 
-
-  // should return a promise with all dogs in the database
-  getAllDogs: async () => {
-		return fetch(baseUrl + "/dogs", {
-			method: "GET",
-			headers: myHeaders,
-
-		}).then((response) => response.json());
-		
-	},
-
-
-
- 
-  // should create a dog in the database from a partial dog object
-  // and return a promise with the result
-  postDog: async ({ name, image, description, isFavorite }: Omit<Dog, "id">) => {
-		return fetch(baseUrl + "/dogs", {
-			method: "POST",
-			headers: myHeaders,
-			body: JSON.stringify({
-				name: name,
-				image: image,
-				description: description,
-				isFavorite: isFavorite,
-			}),
-		}).then((response) => response.json());
-	},
-
-  // should delete a dog from the database
-  deleteDog: async (idNum: number) => {
-		return fetch(baseUrl + `/dogs/${idNum}`, {
-			method: "DELETE",
-			headers: myHeaders,
-		}).then((response) => response.json());
-	},  
-
-
-  updateDog: async(idNum: number, isFavorite: boolean) => {
-    return fetch(`${baseUrl}/dogs/${idNum}`, {
-      method: "PAtCH",
-      headers: myHeaders,
-        body: JSON.stringify({
-          isFavorite: !isFavorite,
-        })
-      }).then((response) => response.json());
-    
-    },
-  
-
-  // Just a dummy function for use in the playground
   dummyFunction: () => {
     console.log("dummy stuff");
   },
 };
-

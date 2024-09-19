@@ -1,5 +1,21 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import { dogPictures } from "../dog-pictures";
+import { Dog } from "../types";
+
+
+const defaultSelectedImage = dogPictures.BlueHeeler;
+
+type ClassCreateDogFormProps = {
+  postDog: (dog: Omit<Dog, "id">) => void;
+  isLoading: boolean;
+};
+
+type ClassCreateDogFormState = {
+  nameInput: string;
+  descriptionInput: string;
+  imageInput: string;
+
+};
 
 export class ClassCreateDogForm extends Component {
   render() {
