@@ -8,10 +8,8 @@ type ClassSectionProps = {
   children: ReactNode;
   determineActiveComponent: (component: ActiveComponent) => void;
   activeComponent: ActiveComponent;
-favoritedDogsCount: number;
-unfavoritedCount: number;
-
-
+  favoritedDogsCount: number;
+  unfavoritedDogsCount: number;
 };
 
 export class ClassSection extends Component<ClassSectionProps> {
@@ -19,13 +17,8 @@ export class ClassSection extends Component<ClassSectionProps> {
     activeComponent: ActiveComponent,
     currentComponent: ActiveComponent
   ) => {
-    if (activeComponent === currentComponent) {
-      return "selector active";
-    }
-    return "selector";
+    return activeComponent === currentComponent ? "active" : "";
   };
-
-
 
   render() {
     const favoritedClassName = this.generateClassName(
@@ -50,33 +43,33 @@ export class ClassSection extends Component<ClassSectionProps> {
           </Link>
 
           <div className="selectors">
-      
-            <div className={`selector ${favoritedClassName}`}
-             onClick={() => {
-              this.props.determineActiveComponent("favorited");
-             }}
-             >
+            <div
+              className={`selector ${favoritedClassName}`}
+              onClick={() => {
+                this.props.determineActiveComponent("favorited");
+              }}
+            >
               favorited ( {this.props.favoritedDogsCount} )
             </div>
-
-            {/* This should display the unfavorited count */}
-            <div className={`selector ${ unfavoritedClassName}`}
-             onClick={() => { 
-              this.props.determineActiveComponent("unfavorited");
-             }}
-             >
-              unfavorited ( {this.props.unfavoritedCount} )
+            <div
+              className={`selector ${unfavoritedClassName}`}
+              onClick={() => {
+                this.props.determineActiveComponent("unfavorited");
+              }}
+            >
+              unfavorited ( {this.props.unfavoritedDogsCount} )
             </div>
-            <div className={`selector ${createDogFormClassName}`}
-             onClick={() => {
-              this.props.determineActiveComponent("create-dog-form");
-             }}
-             >
+            <div
+              className={`selector ${createDogFormClassName}`}
+              onClick={() => {
+                this.props.determineActiveComponent("create-dog-form");
+              }}
+            >
               create dog
             </div>
           </div>
         </div>
-        <div className="content-container">{this.props.children}</div>
+        <div className="content-container">{this.props.children}</div>;
       </section>
     );
   }
