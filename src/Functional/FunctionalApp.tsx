@@ -79,8 +79,6 @@ export function FunctionalApp() {
     (dog) => dog.isFavorite === false
   );
 
-
-
   const determineDogArray = (): Dog[] => {
     switch (activeComponent) {
       case "all":
@@ -100,7 +98,7 @@ export function FunctionalApp() {
       <header>
         <h1>pup-e-picker (Functional)</h1>
       </header>
-      <FunctionalSection 
+      <FunctionalSection
         determineActiveComponent={determineActiveComponent}
         activeComponent={activeComponent}
         favoritedDogsCount={favoritedDogs.length}
@@ -119,4 +117,4 @@ export function FunctionalApp() {
       </FunctionalSection>
     </div>
   );
-};
+}

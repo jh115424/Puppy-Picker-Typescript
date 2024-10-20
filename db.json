@@ -1,1 +1,102 @@
-{"dogs":[{"name":"Chris","image":"/assets/boxer.png","description":"dearly baseline following where dot bubbly combat sympathetically","isFavorite":false,"id":0},{"name":"Blake","image":"/assets/corgi.png","description":"ugh drat silky blah membership","isFavorite":false,"id":1},{"name":"Junius","image":"/assets/dalmation.png","description":"slather above ah rigidly oof","isFavorite":true,"id":2},{"name":"Lesley","image":"/assets/corgi.png","description":"castle yowza zigzag peppery illiterate","isFavorite":true,"id":3},{"name":"Genoveva","image":"/assets/corgi.png","description":"craft circle near equally littleneck","isFavorite":true,"id":4},{"name":"Talon","image":"/assets/corgi.png","description":"drat furthermore oh toboggan gentleman hover phony","isFavorite":false,"id":5},{"name":"Edgar","image":"/assets/boxer.png","description":"in yum grit shady where","isFavorite":false,"id":6},{"name":"Lonny","image":"/assets/blue-heeler.png","description":"travel queasily among brr however unaccountably tidy","isFavorite":true,"id":7},{"name":"Helen","image":"/assets/dalmation.png","description":"between pungent which boo mmm","isFavorite":true,"id":8},{"name":"Estevan","image":"/assets/dalmation.png","description":"fast propose phooey around corny","isFavorite":true,"id":9},{"name":"Aditya","image":"/assets/blue-heeler.png","description":"ew charming hm alongside wonderfully oh meh round","isFavorite":true,"id":10},{"name":"Kenneth","image":"/assets/cowardly.png","description":"mysteriously wherever yowza slice below mapping that","isFavorite":false,"id":11},{"name":"Cathrine","image":"/assets/corgi.png","description":"at fishbone instead homely ah per batting unimportant","isFavorite":true,"id":12},{"name":"Leslie","image":"/assets/corgi.png","description":"whoa briefly blench attitude politely","isFavorite":true,"id":13},{"name":"Timothy","image":"/assets/dalmation.png","description":"tan since times great-grandfather chat exhibit destock","isFavorite":true,"id":14},{"name":"Phoebe","image":"/assets/blue-heeler.png","description":"ferociously meh snuggle selfishly daybed","isFavorite":false,"id":15},{"name":"Cooper","image":"/assets/blue-heeler.png","description":"whoa across too threadbare near tenderly forge showcase","isFavorite":true,"id":16},{"name":"Sherman","image":"/assets/blue-heeler.png","description":"oof considering sparkle violet wavy broad hm","isFavorite":true,"id":17},{"name":"Mckenna","image":"/assets/boxer.png","description":"voluntarily critique jaggedly yahoo seriously","isFavorite":true,"id":18},{"name":"Drake","image":"/assets/corgi.png","description":"shoulder pertinent developmental slowly self-assured hull goodwill pinpoint","isFavorite":true,"id":19}]}
+{
+  "dogs": [
+    {
+      "name": "Blake",
+      "image": "/assets/corgi.png",
+      "description": "ugh drat silky blah membership",
+      "isFavorite": true,
+      "id": 1
+    },
+    {
+      "name": "Genoveva",
+      "image": "/assets/corgi.png",
+      "description": "craft circle near equally littleneck",
+      "isFavorite": true,
+      "id": 4
+    },
+    {
+      "name": "Talon",
+      "image": "/assets/corgi.png",
+      "description": "drat furthermore oh toboggan gentleman hover phony",
+      "isFavorite": false,
+      "id": 5
+    },
+    {
+      "name": "Edgar",
+      "image": "/assets/boxer.png",
+      "description": "in yum grit shady where",
+      "isFavorite": false,
+      "id": 6
+    },
+    {
+      "name": "Lonny",
+      "image": "/assets/blue-heeler.png",
+      "description": "travel queasily among brr however unaccountably tidy",
+      "isFavorite": true,
+      "id": 7
+    },
+    {
+      "name": "Helen",
+      "image": "/assets/dalmation.png",
+      "description": "between pungent which boo mmm",
+      "isFavorite": true,
+      "id": 8
+    },
+    {
+      "name": "Estevan",
+      "image": "/assets/dalmation.png",
+      "description": "fast propose phooey around corny",
+      "isFavorite": true,
+      "id": 9
+    },
+    {
+      "name": "Aditya",
+      "image": "/assets/blue-heeler.png",
+      "description": "ew charming hm alongside wonderfully oh meh round",
+      "isFavorite": true,
+      "id": 10
+    },
+    {
+      "name": "Kenneth",
+      "image": "/assets/cowardly.png",
+      "description": "mysteriously wherever yowza slice below mapping that",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Phoebe",
+      "image": "/assets/blue-heeler.png",
+      "description": "ferociously meh snuggle selfishly daybed",
+      "isFavorite": false,
+      "id": 15
+    },
+    {
+      "name": "Cooper",
+      "image": "/assets/blue-heeler.png",
+      "description": "whoa across too threadbare near tenderly forge showcase",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Sherman",
+      "image": "/assets/blue-heeler.png",
+      "description": "oof considering sparkle violet wavy broad hm",
+      "isFavorite": true,
+      "id": 17
+    },
+    {
+      "name": "drake",
+      "isFavorite": false,
+      "description": "furry",
+      "image": "/assets/boxer.jpeg",
+      "id": 18
+    },
+    {
+      "name": "drake",
+      "isFavorite": false,
+      "description": "he is so adorable",
+      "image": "/assets/blue-heeler.png",
+      "id": 19
+    }
+  ]
+}

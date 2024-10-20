@@ -1,4 +1,3 @@
-// you can use this type for react children if you so choose
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ActiveComponent } from "../types";
@@ -24,7 +23,10 @@ export const FunctionalSection = ({
   };
   const favoriteClassName = makeClassName(activeComponent, "favorited");
   const unfavoriteClassName = makeClassName(activeComponent, "unfavorited");
-  const makeDogFormClassName = makeClassName(activeComponent, "create-dog-form");
+  const makeDogFormClassName = makeClassName(
+    activeComponent,
+    "create-dog-form"
+  );
 
   return (
     <section id="main-section">
@@ -57,4 +59,4 @@ export const FunctionalSection = ({
       <div className="content-container">{children}</div>
     </section>
   );
-}
+};

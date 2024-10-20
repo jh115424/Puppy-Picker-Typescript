@@ -2,7 +2,6 @@ import { Component, createRef } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Dog } from "../types";
 
-
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
 type ClassCreateDogFormProps = {
@@ -14,15 +13,14 @@ type ClassCreateDogFormState = {
   nameInput: string;
   descriptionInput: string;
   imageInput: string;
-
 };
 
 export class ClassCreateDogForm extends Component<
-ClassCreateDogFormProps,
-ClassCreateDogFormState
+  ClassCreateDogFormProps,
+  ClassCreateDogFormState
 > {
   [x: string]: any;
-  state: ClassCreateDogFormState ={
+  state: ClassCreateDogFormState = {
     nameInput: "",
     descriptionInput: "",
     imageInput: defaultSelectedImage,
@@ -35,19 +33,15 @@ ClassCreateDogFormState
       imageInput: defaultSelectedImage,
     });
     if (this.dropdown.current)
-    {
-      this.dropdown.current.value = defaultSelectedImage;
-    };
-    const dropDown = createRef<HTMLSelectElement>();
-  }
-
+      this.dropDown.current.value = defaultSelectedImage;
+  };
+  dropdown = createRef<HTMLSelectElement>();
 
   render() {
     const { postDog, isLoading } = this.props;
     const { nameInput, descriptionInput, imageInput } = this.state;
     return (
       <form
-        // action=""
         id="create-dog-form"
         onSubmit={(e) => {
           e.preventDefault();
@@ -60,7 +54,7 @@ ClassCreateDogFormState
           this.resetState();
         }}
       >
-         <h4>Create a New Dog</h4>
+        <h4>Create a New Dog</h4>
         <label htmlFor="name">Dog Name</label>
         <input
           type="text"
