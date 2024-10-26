@@ -11,7 +11,7 @@
       "name": "Genoveva",
       "image": "/assets/corgi.png",
       "description": "craft circle near equally littleneck",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 4
     },
     {
