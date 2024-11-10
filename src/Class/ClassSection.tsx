@@ -1,4 +1,3 @@
-
 import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ActiveComponent } from "../types";

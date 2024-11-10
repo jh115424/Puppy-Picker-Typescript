@@ -1,13 +1,6 @@
 {
   "dogs": [
     {
-      "name": "Reggie",
-      "image": "/assets/boxer.png",
-      "description": "realign unripe innocently spritz qua monumental overwhelm",
-      "isFavorite": true,
-      "id": 9
-    },
-    {
       "name": "Cornell",
       "image": "/assets/blue-heeler.png",
       "description": "posh minimize wearily alongside fickle gadzooks carelessly refer",
@@ -15,32 +8,11 @@
       "id": 10
     },
     {
-      "name": "Henderson",
-      "image": "/assets/cowardly.png",
-      "description": "helo litter instead naturally terrace mixed comparison",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
-      "name": "Elwyn",
-      "image": "/assets/chihuahua.avif",
-      "description": "wholly letter questionably into hmph supposing psst",
-      "isFavorite": false,
-      "id": 12
-    },
-    {
       "name": "Trever",
       "image": "/assets/blue-heeler.png",
       "description": "dry off separately gosh rewarding yowza forehead",
       "isFavorite": false,
       "id": 13
-    },
-    {
-      "name": "Laverne",
-      "image": "/assets/boxer.png",
-      "description": "horde adventurously closed after toll",
-      "isFavorite": false,
-      "id": 14
     },
     {
       "name": "Ronny",
@@ -76,6 +48,97 @@
       "description": "off cheer pfft daring yippee",
       "isFavorite": false,
       "id": 19
+    },
+    {
+      "name": "hhhh",
+      "isFavorite": false,
+      "description": "hhhhhh",
+      "image": "/assets/corgi.png",
+      "id": 20
+    },
+    {
+      "name": "dsfs",
+      "isFavorite": false,
+      "description": "fsfsfs",
+      "image": "/assets/blue-heeler.png",
+      "id": 21
+    },
+    {
+      "name": "drake",
+      "isFavorite": false,
+      "description": "dddd",
+      "image": "/assets/boxer.jpeg",
+      "id": 22
+    },
+    {
+      "name": "ddd",
+      "isFavorite": false,
+      "description": "ddddd",
+      "image": "/assets/chihuahua.avif",
+      "id": 23
+    },
+    {
+      "name": "ssssss",
+      "isFavorite": false,
+      "description": "sssss",
+      "image": "/assets/boxer.jpeg",
+      "id": 24
+    },
+    {
+      "name": "sss",
+      "isFavorite": false,
+      "description": "ssss",
+      "image": "/assets/boxer.jpeg",
+      "id": 25
+    },
+    {
+      "name": "dddd",
+      "isFavorite": false,
+      "description": "dddd",
+      "image": "/assets/chihuahua.avif",
+      "id": 26
+    },
+    {
+      "name": "sssss",
+      "isFavorite": false,
+      "description": "ssssss",
+      "image": "/assets/chihuahua.avif",
+      "id": 27
+    },
+    {
+      "name": "sssss",
+      "isFavorite": false,
+      "description": "ssssss",
+      "image": "/assets/boxer.jpeg",
+      "id": 28
+    },
+    {
+      "name": "ssss",
+      "isFavorite": false,
+      "description": "sssss",
+      "image": "/assets/boxer.jpeg",
+      "id": 29
+    },
+    {
+      "name": "ssss",
+      "isFavorite": false,
+      "description": "sssss",
+      "image": "/assets/dalmation.png",
+      "id": 30
+    },
+    {
+      "name": "sssss",
+      "isFavorite": false,
+      "description": "ssssss",
+      "image": "/assets/dalmation.png",
+      "id": 31
+    },
+    {
+      "name": "wwww",
+      "isFavorite": false,
+      "description": "wwwwww",
+      "image": "/assets/cowardly.png",
+      "id": 32
     }
   ]
 }

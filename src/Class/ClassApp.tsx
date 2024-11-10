@@ -83,7 +83,7 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
         toast.error(`Unable to delete ${dog.name}!`);
       })
       .finally(() => {
-        this.setState({ isLoading: false});
+        this.setState({ isLoading: false });
       });
   };
 

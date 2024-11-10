@@ -46,6 +46,7 @@ export class ClassCreateDogForm extends Component<
         id="create-dog-form"
         onSubmit={(e) => {
           e.preventDefault();
+
           postDog({
             name: nameInput,
             isFavorite: false,
@@ -72,6 +73,7 @@ export class ClassCreateDogForm extends Component<
           name="description"
           cols={80}
           rows={10}
+          value={descriptionInput}
           disabled={isLoading}
           onChange={(e) => {
             this.setState({ descriptionInput: e.target.value });
@@ -81,7 +83,7 @@ export class ClassCreateDogForm extends Component<
         <label htmlFor="picture">Select an Image</label>
         <select
           name="picture"
-          ref={this.dropDown}
+          // ref={this.dropDown}
           defaultValue={defaultSelectedImage}
           disabled={isLoading}
           onChange={(e) => {
@@ -90,7 +92,11 @@ export class ClassCreateDogForm extends Component<
         >
           {Object.entries(dogPictures).map(([label, pictureValue]) => {
             return (
-              <option value={pictureValue} key={pictureValue}>
+              <option
+                value={pictureValue}
+                key={pictureValue}
+                selected={imageInput == pictureValue}
+              >
                 {label}
               </option>
             );

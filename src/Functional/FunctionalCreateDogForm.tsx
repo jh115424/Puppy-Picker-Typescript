@@ -1,5 +1,5 @@
 import { dogPictures } from "../dog-pictures";
-import {useState } from "react";
+import { useState } from "react";
 import { Dog } from "../types";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
@@ -14,15 +14,11 @@ export const FunctionalCreateDogForm = ({
   const [nameInput, setNameInput] = useState("");
   const [descriptionInput, setDescriptionInput] = useState("");
   const [imageInput, setImageInput] = useState(defaultSelectedImage);
-  // const dropDown = useRef<HTMLSelectElement>(null);
 
   const resetState = () => {
     setNameInput("");
     setDescriptionInput("");
     setImageInput(defaultSelectedImage);
-    // if (dropDown.current) {
-    //   dropDown.current.value = defaultSelectedImage;
-    // }
   };
 
   return (
@@ -38,8 +34,7 @@ export const FunctionalCreateDogForm = ({
           image: imageInput,
         }).then(() => {
           resetState();
-        })
-              // how to validate if the dogs are valid and what to do if they are.
+        });
       }}
     >
       <h4>Create a New Dog</h4>
@@ -68,8 +63,6 @@ export const FunctionalCreateDogForm = ({
       <label htmlFor="picture">Select an Image</label>
       <select
         name="picture"
-        // ref={dropDown}
-        // value={defaultSelectedImage}
         defaultValue={defaultSelectedImage}
         disabled={isLoading}
         onChange={(e) => setImageInput(e.target.value)}

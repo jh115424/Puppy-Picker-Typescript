@@ -24,7 +24,6 @@ export function FunctionalApp() {
 
   const postDog = async (dog: Omit<Dog, "id">) => {
     setIsLoading(true);
-    
 
     try {
       await Requests.postDog(dog);
@@ -32,10 +31,9 @@ export function FunctionalApp() {
       toast.success(`Created ${dog.name}`);
       return;
     } catch {
-
       toast.error(`Unable to create ${dog.name}`);
-      
-      throw new Error('Something went wrong');
+
+      throw new Error("Something went wrong");
     } finally {
       setIsLoading(false);
     }
@@ -70,11 +68,6 @@ export function FunctionalApp() {
   const determineActiveComponent = (component: ActiveComponent) => {
     const newActiveValue = component === activeComponent ? "all" : component;
     setActiveComponent(newActiveValue);
-    // if (component === activeComponent) {
-    //   setActiveComponent("all");
-    // } else {
-    //   setActiveComponent(component);
-    // }
   };
 
   const shouldShowForm = activeComponent === "create-dog-form";
