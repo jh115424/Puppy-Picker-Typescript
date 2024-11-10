@@ -1,101 +1,80 @@
 {
   "dogs": [
     {
-      "name": "Blake",
-      "image": "/assets/corgi.png",
-      "description": "ugh drat silky blah membership",
-      "isFavorite": true,
-      "id": 1
-    },
-    {
-      "name": "Genoveva",
-      "image": "/assets/corgi.png",
-      "description": "craft circle near equally littleneck",
-      "isFavorite": false,
-      "id": 4
-    },
-    {
-      "name": "Talon",
-      "image": "/assets/corgi.png",
-      "description": "drat furthermore oh toboggan gentleman hover phony",
-      "isFavorite": false,
-      "id": 5
-    },
-    {
-      "name": "Edgar",
+      "name": "Reggie",
       "image": "/assets/boxer.png",
-      "description": "in yum grit shady where",
-      "isFavorite": false,
-      "id": 6
-    },
-    {
-      "name": "Lonny",
-      "image": "/assets/blue-heeler.png",
-      "description": "travel queasily among brr however unaccountably tidy",
-      "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Helen",
-      "image": "/assets/dalmation.png",
-      "description": "between pungent which boo mmm",
-      "isFavorite": true,
-      "id": 8
-    },
-    {
-      "name": "Estevan",
-      "image": "/assets/dalmation.png",
-      "description": "fast propose phooey around corny",
+      "description": "realign unripe innocently spritz qua monumental overwhelm",
       "isFavorite": true,
       "id": 9
     },
     {
-      "name": "Aditya",
+      "name": "Cornell",
       "image": "/assets/blue-heeler.png",
-      "description": "ew charming hm alongside wonderfully oh meh round",
+      "description": "posh minimize wearily alongside fickle gadzooks carelessly refer",
       "isFavorite": true,
       "id": 10
     },
     {
-      "name": "Kenneth",
+      "name": "Henderson",
       "image": "/assets/cowardly.png",
-      "description": "mysteriously wherever yowza slice below mapping that",
+      "description": "helo litter instead naturally terrace mixed comparison",
       "isFavorite": false,
       "id": 11
     },
     {
-      "name": "Phoebe",
+      "name": "Elwyn",
+      "image": "/assets/chihuahua.avif",
+      "description": "wholly letter questionably into hmph supposing psst",
+      "isFavorite": false,
+      "id": 12
+    },
+    {
+      "name": "Trever",
       "image": "/assets/blue-heeler.png",
-      "description": "ferociously meh snuggle selfishly daybed",
+      "description": "dry off separately gosh rewarding yowza forehead",
+      "isFavorite": false,
+      "id": 13
+    },
+    {
+      "name": "Laverne",
+      "image": "/assets/boxer.png",
+      "description": "horde adventurously closed after toll",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Ronny",
+      "image": "/assets/corgi.png",
+      "description": "colleague per prize where during footwear coin",
       "isFavorite": false,
       "id": 15
     },
     {
-      "name": "Cooper",
-      "image": "/assets/blue-heeler.png",
-      "description": "whoa across too threadbare near tenderly forge showcase",
-      "isFavorite": true,
+      "name": "Hailey",
+      "image": "/assets/corgi.png",
+      "description": "hmph how supersize hence wiggly might dense",
+      "isFavorite": false,
       "id": 16
     },
     {
-      "name": "Sherman",
+      "name": "Tre",
       "image": "/assets/blue-heeler.png",
-      "description": "oof considering sparkle violet wavy broad hm",
-      "isFavorite": true,
+      "description": "break manager dreary nonbeliever besides eek advanced consequently",
+      "isFavorite": false,
       "id": 17
     },
     {
-      "name": "drake",
+      "name": "Alexis",
+      "image": "/assets/chihuahua.avif",
+      "description": "sandbar starry directive tower subsidise seller powerfully",
       "isFavorite": false,
-      "description": "furry",
-      "image": "/assets/boxer.jpeg",
       "id": 18
     },
     {
-      "name": "drake",
-      "isFavorite": false,
-      "description": "he is so adorable",
+      "name": "Junior",
       "image": "/assets/blue-heeler.png",
+      "description": "off cheer pfft daring yippee",
+      "isFavorite": false,
       "id": 19
     }
   ]

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, createRef } from "react";
 import { dogPictures } from "../dog-pictures";
 import { Dog } from "../types";

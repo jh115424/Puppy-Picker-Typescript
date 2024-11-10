@@ -21,8 +21,8 @@ export class ClassDogs extends Component<ClassDogProps> {
               dog={dog}
               key={dog.id}
               onTrashIconClick={() => deleteDog(dog)}
-              onHeartClick={() => updateDog(dog, true)}
-              onEmptyHeartClick={() => updateDog(dog, false)}
+              onHeartClick={() => updateDog(dog, false)}
+              onEmptyHeartClick={() => updateDog(dog, true)}
               isLoading={isLoading}
             />
           );

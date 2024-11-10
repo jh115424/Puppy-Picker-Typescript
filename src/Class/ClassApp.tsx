@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component } from "react";
 import { ClassSection } from "./ClassSection";
 import { ActiveComponent, Dog } from "../types";
@@ -82,7 +83,7 @@ export class ClassApp extends Component<Record<string, never>, ClassAppState> {
         toast.error(`Unable to delete ${dog.name}!`);
       })
       .finally(() => {
-        this.setState({ isLoading: false });
+        this.setState({ isLoading: false});
       });
   };
 

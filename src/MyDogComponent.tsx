@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 interface Dog {
   // Define the properties of the Dog interface here
   id: number;

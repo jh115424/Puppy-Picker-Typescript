@@ -24,12 +24,18 @@ export function FunctionalApp() {
 
   const postDog = async (dog: Omit<Dog, "id">) => {
     setIsLoading(true);
+    
+
     try {
       await Requests.postDog(dog);
       await refetchDogData();
       toast.success(`Created ${dog.name}`);
+      return;
     } catch {
+
       toast.error(`Unable to create ${dog.name}`);
+      
+      throw new Error('Something went wrong');
     } finally {
       setIsLoading(false);
     }
@@ -50,33 +56,32 @@ export function FunctionalApp() {
 
   const updateDog = async (dog: Dog, isFavorite: boolean) => {
     setIsLoading(true);
+    const isFavValue = isFavorite ? "Favorited" : "Unfavorited";
     try {
       await Requests.updateDog(dog, isFavorite);
       await refetchDogData();
-      toast.success(`${isFavorite ? "Favorited" : "Unfavorited"} ${dog.name}`);
+      toast.success(`${isFavValue} ${dog.name}`);
     } catch {
-      toast.error(
-        `Unable to ${isFavorite ? "favorite" : "unfavorite"} ${dog.name}`
-      );
+      toast.error(`Unable to ${isFavValue} ${dog.name}`);
     } finally {
       setIsLoading(false);
     }
   };
   const determineActiveComponent = (component: ActiveComponent) => {
-    if (component === activeComponent) {
-      setActiveComponent("all");
-    } else {
-      setActiveComponent(component);
-    }
+    const newActiveValue = component === activeComponent ? "all" : component;
+    setActiveComponent(newActiveValue);
+    // if (component === activeComponent) {
+    //   setActiveComponent("all");
+    // } else {
+    //   setActiveComponent(component);
+    // }
   };
 
   const shouldShowForm = activeComponent === "create-dog-form";
 
-  const favoritedDogs = Object.values(allDogs).filter(
-    (dog) => dog.isFavorite === true
-  );
+  const favoritedDogs = Object.values(allDogs).filter((dog) => dog.isFavorite);
   const unfavoritedDogs = Object.values(allDogs).filter(
-    (dog) => dog.isFavorite === false
+    (dog) => !dog.isFavorite
   );
 
   const determineDogArray = (): Dog[] => {
